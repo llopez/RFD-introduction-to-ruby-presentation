@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- Slide meta data, remove/edit as you see fit -->
+    <title>Introducción a Ruby</title>
+    <meta name="author" content="Luis Lopez" />
+    <meta name="email" content="luigibyte@gmail.com" />
+    <meta name="date" content="2013-02-27" />
+    <!-- Slippy core file and dependencies -->
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="jquery.history.js"></script>
+    <script type="text/javascript" src="custom.js"></script>
+    <script type="text/javascript" src="slippy-0.9.0.js"></script>
+    <!-- Slippy structural styles -->
+    <link type="text/css" rel="stylesheet" href="slippy-0.9.0.css"/>
+    <!-- Slippy theme -->
+    <link type="text/css" rel="stylesheet" href="slippy-kerryb.css"/>
+    <!-- Syntax highlighting -->
+    <script type="text/javascript" src="highlighter/shCore.js"></script>
+    <script type="text/javascript" src="highlighter/shBrushBash.js"></script>
+    <script type="text/javascript" src="highlighter/shBrushRuby.js"></script>
+    <link type="text/css" rel="stylesheet" href="highlighter/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="highlighter/shThemeEclipse.css"/>
+    <!-- Slippy init code -->
+    <script type="text/javascript">
+      $(function() {
+          $(".slide").slippy({
+          });
+          SyntaxHighlighter.all();
+          });
+    </script>
+  </head>
+  <body>
+    
+    <div class="slide">
+      <h1>Introducción a Ruby</h1>
+      <div class='center'><img src="images/ruby.png"></div>
+    </div>
+
+    <div class="slide">
+      <h1>¿Qué es ruby?</h1>
+      <p>
+        Es un lenguaje de programación poderoso y flexible que puedes usar en el desarrollo aplicaciones desktop, web o simplemente de consola. 
+      </p>
+      <p>
+        Es un lenguaje de alto nivel, interpretado y orientado a objetos.
+      </p>
+    </div>
+
+    <div class="slide">
+      <h1>¿Qué es ruby?</h1>
+      <div>
+        <ul>
+          <li><strong>De alto nivel</strong>, lo que quiere decir que leer y escribir Ruby es realmente fácil; ¡se parece mucho al inglés común y corriente!</li>
+          <li><strong>Interpretado</strong> porque no necesitas un compilador para ejecutar Ruby. Puedes escribirlo en tu propio computador</li>
+          <li><strong>Orientado a los objetos</strong> porque les permite a los usuarios manipular estructuras de datos llamadas objetos, para construir y ejecutar programas. En Ruby, todo es un objeto.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Todo en Ruby es un objeto</h1>
+      <div>
+        <pre class="brush: ruby">
+          1.class                 # => Fixnum
+          1.5.class               # => Float
+          “hello”.class           # => String
+          true.class              # => TrueClass
+          false.class             # => FalseClass
+          nil.class               # => NilClass
+          99999999999999999.class # => Bignum
+        </pre>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Cadena de caracteres</h1>
+      <p>
+        Una cadena de caracteres es una secuencia de caracteres entre comillas. Este objeto pertenece a la clase <strong>String</strong>. 
+      </p>
+      <div>
+        <pre class="brush: ruby">
+          “hello world”.class      # => String
+          “hello world”.length     # => 11
+          “hello world”.capitalize # => “Hello world”
+          “hello world”.upcase     # => “HELLO WORLD”
+          “hello world”[0]         # => “h”
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Array</h1>
+      <p>Un arreglo es un objeto donde es posible almacenar una serie de otros objetos. Los arreglos pertenecen a la clase de <strong>Array</strong>.</p>
+      <p>En los arreglos es posible almacenar cadenas de caracteres (String), números (Bignum, Fixnum y Float), otros arreglos (Array) y no necesariamente tienen que ser del mismo tipo de dato.</p>
+      <div>
+        <pre class="brush: ruby">
+          array = [1, 2, 3, 4, 5]
+          array[0] # => 1
+          array[1] # => 2
+          array[2] # => 3
+          array[3] # => 4
+          array[4] # => 5
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Hash</h1>
+      <p>Un hash es como un arreglo en el cual se puede acceder a los valores por una clave.</p>
+      <div>
+        <pre class="brush: ruby">
+          hash = {first_name: ‘Luis’, last_name: ‘lopez’, age: 29}
+          hash[:first_name] # => ‘Luis’
+          hash[:last_name]  # => ‘Lopez’
+          hash[:age]        # => 29
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Estructuras de control (condicionales)</h1>
+      <p>IF, ELSE, ELSIF</p>
+      <div>
+        <pre class="brush: ruby">
+          if conditional
+            # code...
+          elsif conditional
+            # code...
+          else
+            # code...
+          end
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Estructuras de control (condicionales)</h1>
+      <p>UNLESS</p>
+      <div>
+        <pre class="brush: ruby">
+          unless conditional
+            # code...
+          else
+            # code...
+          end
+        </pre>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Estructuras de control (condicionales)</h1>
+      <p>CASE</p>
+      <div>
+        <pre class="brush: ruby">
+          case expression
+            when condition
+              # code...
+            when condition
+              # code...
+            else
+              # code...
+          end
+        </pre>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Estructuras de control (iterativas)</h1>
+      <p>WHILE</p>
+      <div>
+        <pre class="brush: ruby">
+          while conditional [do]
+            # code...
+          end
+
+          # OR
+
+          begin
+            # code...
+          end while condition
+        </pre>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Estructuras de control (iterativas)</h1>
+      <p>UNTIL</p>
+      <div>
+        <pre class="brush: ruby">
+          until condition [do]
+            # code...
+          end
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Estructuras de control (iterativas)</h1>
+      <p>FOR</p>
+      <div>
+        <pre class="brush: ruby">
+          for variable [, variable ...] in expresión [do]
+            # code...
+          end
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Clase</h1>
+      <p>Una clase se puede definir como una plantilla para crear un objeto. Esta constituida por atributos y métodos:</p>
+      <p>Podemos pensar a los atributos como las características que definen a un objeto y a los métodos como aquello que define el comportamiento del objeto.</p>
+    </div>
+    
+    <div class="slide">
+      <h1>Clase</h1>
+      <p>Ejemplo</p>
+      <div>
+        <pre class="brush: ruby">
+          class Person
+            attr_accessor :first_name, :last_name, :age
+
+            def initialize(first_name, last_name, age)
+              @first_name = first_name
+              @last_name = last_name
+              @age = age
+            end
+
+            def name
+              “#{first_name.capitalize} #{last_name.capitalize}”
+            end
+
+            def say_hello
+              puts “Hello guys, My name is #{name}”
+            end
+          end
+        </pre>
+      </div>
+    </div>
+    
+    
+    <div class="slide">
+      <h1>Instancia</h1>
+      <p>Una instancia de un objeto es la creación del mismo partiendo de una clase.</p>
+      <p>Dada nuetra clase Person, podemos instanciar un objeto de la siguiente manera:</p>
+      <div>
+        <pre class="brush: ruby">
+          person = Person.new(‘luis’, ‘lopez’, 29)
+          person.first_name # => ‘luis’
+          person.last_name  # => ‘lopez’
+          person.age        # => 29
+          person.name       # => ‘Luis Lopez’
+          person.say_hello  # => ‘Hello guys, My name is Luis Lopez’
+        </pre>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <h1>Herencia</h1>
+      <p>La herencia es la relación entre una clase general y otra más específica, padre e hija.</p>
+      <p>Nos facilita la reutilización y la extensibilidad del código.</p>
+      <div>
+        <pre class="brush: ruby">
+          class Worker < Person
+            attr_accessor :job 
+          end
+          
+          worker = Worker.new(‘Joaquín’, ‘Vicente’, 30)
+          worker.first_name   # => ‘Joaquín’
+          worker.last_name    # => ‘Vicente’
+          worker.age          # => 30
+          worker.job          # => nil
+          worker.job = ‘Programmer’
+          worker.job          # => ‘Programmer’
+          worker.say_hello    # => ‘Hello guys, My name is Joaquín Vicente’
+        </pre>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h1>Más información en</h1>
+      <h2><a href="https://www.ruby-lang.org" target='blank'>https://www.ruby-lang.org</a></h2>
+      <br>
+      <div class="center">
+        <img src="images/ruby.png" alt="ruby" />
+      </div>
+    </div>
+  </body>
+</html>
