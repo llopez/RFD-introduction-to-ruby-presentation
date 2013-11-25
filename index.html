@@ -49,7 +49,6 @@
     </div>
 
     <div class="slide">
-      <h1>¿Qué es ruby?</h1>
       <div>
         <ul>
           <li><strong>De alto nivel</strong>, lo que quiere decir que leer y escribir Ruby es realmente fácil; ¡se parece mucho al inglés común y corriente!</li>
@@ -70,6 +69,7 @@
           false.class             # => FalseClass
           nil.class               # => NilClass
           99999999999999999.class # => Bignum
+          :active.class           # => Symbol
         </pre>
       </div>
     </div>
@@ -128,8 +128,18 @@
     
     <div class="slide">
       <h1>Estructuras de control (condicionales)</h1>
-      <p>IF, ELSE, ELSIF</p>
+      <ul>
+        <li>IF</li>
+        <li>ELSE</li>
+        <li>ELSIF</li>
+        <li>UNLESS</li>
+        <li>CASE</li>
+      </ul>
+    </div>
+    
+    <div class="slide">
       <div>
+        <h2>IF</h2>
         <pre class="brush: ruby">
           if conditional
             # code...
@@ -139,13 +149,7 @@
             # code...
           end
         </pre>
-      </div>
-    </div>
-    
-    <div class="slide">
-      <h1>Estructuras de control (condicionales)</h1>
-      <p>UNLESS</p>
-      <div>
+        <h2>UNLESS</h2>
         <pre class="brush: ruby">
           unless conditional
             # code...
@@ -153,13 +157,7 @@
             # code...
           end
         </pre>
-      </div>
-    </div>
-
-    <div class="slide">
-      <h1>Estructuras de control (condicionales)</h1>
-      <p>CASE</p>
-      <div>
+        <h2>CASE</h2>
         <pre class="brush: ruby">
           case expression
             when condition
@@ -175,7 +173,15 @@
 
     <div class="slide">
       <h1>Estructuras de control (iterativas)</h1>
-      <p>WHILE</p>
+      <ul>
+        <li>WHILE</li>
+        <li>UNTIL</li>
+        <li>FOR</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>WHILE</h2>
       <div>
         <pre class="brush: ruby">
           while conditional [do]
@@ -188,25 +194,13 @@
             # code...
           end while condition
         </pre>
-      </div>
-    </div>
-
-    <div class="slide">
-      <h1>Estructuras de control (iterativas)</h1>
-      <p>UNTIL</p>
-      <div>
+        <h2>UNTIL</h2>
         <pre class="brush: ruby">
           until condition [do]
             # code...
           end
         </pre>
-      </div>
-    </div>
-    
-    <div class="slide">
-      <h1>Estructuras de control (iterativas)</h1>
-      <p>FOR</p>
-      <div>
+        <h2>FOR</h2>
         <pre class="brush: ruby">
           for variable [, variable ...] in expresión [do]
             # code...
@@ -245,8 +239,7 @@
     </div>
     
     <div class="slide">
-      <h1>Clase</h1>
-      <p>Ejemplo</p>
+      <h2>Ejemplo de clase</h2>
       <div>
         <pre class="brush: ruby">
           class Person
