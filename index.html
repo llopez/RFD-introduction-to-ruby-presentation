@@ -93,7 +93,6 @@
     <div class="slide">
       <h1>Array</h1>
       <p>Un arreglo es un objeto donde es posible almacenar una serie de otros objetos. Los arreglos pertenecen a la clase de <strong>Array</strong>.</p>
-      <p>En los arreglos es posible almacenar cadenas de caracteres (String), números (Bignum, Fixnum y Float), otros arreglos (Array) y no necesariamente tienen que ser del mismo tipo de dato.</p>
       <div>
         <pre class="brush: ruby">
           array = [1, 2, 3, 4, 5]
@@ -102,6 +101,14 @@
           array[2] # => 3
           array[3] # => 4
           array[4] # => 5
+          
+          for i in array
+            puts i
+          end
+          
+          # OR
+          
+          array.each{|i| puts i}
         </pre>
       </div>
     </div>
@@ -207,6 +214,29 @@
         </pre>
       </div>
     </div>
+
+    <div class="slide">
+      <h1>Método</h1>
+      <p>Un método es como una función que puede recibir o no parámetros</p>
+      <p>"El <strong>return</strong> esta implícito"</p>
+      <p>Ejemplo:</p>
+      <div>
+        <pre class="brush: ruby">
+          def say_hello(name)
+            return "Hello guys, My name is #{name}"
+          end
+          
+          # OR
+          
+          def say_hello(name)
+            "Hello guys, My name is #{name}"
+          end
+          
+          say_hello('Luis') # => "Hello guys, My name is Luis"
+        </pre>
+      </div>
+    </div>
+
     
     <div class="slide">
       <h1>Clase</h1>
